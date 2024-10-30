@@ -1,0 +1,16 @@
+{
+    "1698163614": {
+        "permissions": "none",
+        "coords": {
+            "x": 194.79928588867188,
+            "y": -929.5608520507813,
+            "z": 30.68680953979492
+        },
+        "sprite": 77,
+        "scale": 100,
+        "name": "Legion Square",
+        "colour": 3,
+        "srange": true,
+        "display": 2
+    }
+}

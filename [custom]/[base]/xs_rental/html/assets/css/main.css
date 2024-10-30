@@ -1,0 +1,521 @@
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
+@font-face {
+    font-family: "MADE Outer Sans";
+    src: url('../fonts/outer_sans.otf');
+}
+
+body {
+    overflow: hidden;
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #0C1F1D 0%, #0c1f1dc4 25.61%, rgba(19, 13, 33, 0.00) 100%);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.rotate-container {
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rotate-text {
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: opacity .2s;
+  color: #ffffff; 
+}
+
+
+  .rotate-text:hover {
+    opacity: 1;
+  }
+
+
+
+
+.interface-main {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    left: 3%;
+    width: auto;
+    height: auto;
+
+    display: flex;
+    gap: 5vh;
+    align-items: center;
+}
+
+.interface-main-left img {
+    position: relative;
+    height: 90.3322vh;
+    width: 1.7891vh;
+}
+
+.interface-main-right {
+    position: relative;
+    width: auto;
+    height: 89.2593vh;
+}
+
+.interface-main-right-head {
+    position: relative;
+    width: auto;
+    height: 5.7407vh;
+}
+
+.interface-main-right-head-top {
+    position: relative;
+    align-items: center;
+    width: auto;
+    height: 3.7037vh;
+    display: flex;
+    gap: 1vh;
+}
+
+.interface-main-right-head-top h1 {
+    font-family: "MADE Outer Sans";
+    font-size: 2.8947vh;
+    font-weight: 700;
+    text-shadow: 0vh 0.6433vh 3.3722vh rgba(0, 255, 149, 0.74);
+    background: linear-gradient(to right, #00FFC2 0%, #00FF75 100%); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.interface-main-right-head-top img {
+    width: 8.5185vh;
+    height: 1.2963vh;
+}
+
+.interface-main-right-head p {
+    color: #FFF;
+    font-family: "MADE Outer Sans";
+    font-size: 1.8519vh;
+    font-weight: 400;
+    margin-top: 0%;
+}
+
+.interface-main-right-search {
+    position: relative;
+    width: 30vh;
+    height: 3.5185vh;
+
+    margin-top: 10%;
+
+    background: radial-gradient(673.68% 673.68% at 50.00% 50.00%, rgba(5, 5, 5, 0.048) 27.60%, rgba(255, 255, 255, 0.12) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.interface-main-right-search input {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Gilroy";
+    font-size: 1.1111vh;
+    font-weight: 300;
+    width: 25vh;
+    background: none;
+    border: none;
+}
+
+input {
+    outline: none;
+}
+
+.interface-main-right-search div {
+    position: relative;
+    width: 2.4074vh;
+    height: 2.4074vh;
+
+    background: radial-gradient(116.72% 111.99% at 50.00% 50.00%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.00) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interface-main-right-search img {
+    width: 1.4815vh;
+}
+
+.interface-main-right-scrollcontainer {
+    position: relative;
+    width: 30.5vh;
+    height: 77.037vh;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1vh;
+
+    overflow-x: hidden;
+
+    margin-top: 3%;
+}
+
+.interface-main-right-scrollcontainer-tile {
+    position: relative;
+    width: 30vh;
+    height: 7.6vh;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.interface-main-right-scrollcontainer-tile-left {
+    position: relative;
+    width: 4.6296vh;
+    height: 7.4074vh;
+
+    border: 0.0926vh solid #58EE94;
+    background: radial-gradient(#58ee948c 27.60%, #58ee9442 100%);
+    box-shadow: 0px 0px 20px #58ee8283;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interface-main-right-scrollcontainer-tile-left img {
+    width: 2.5vh;
+}
+
+.interface-main-right-scrollcontainer-tile-right {
+    position: relative;
+    width: 24vh;
+    height: 7.4074vh;
+
+    background: radial-gradient(673.68% 673.68% at 50.00% 50.00%, rgba(255, 255, 255, 0.01) 27.60%, rgba(255, 255, 255, 0.12) 100%);
+    box-shadow: 0vh 0vh 2.5vh 0vh rgba(255, 255, 255, 0.05);
+    border: .09vh solid rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.interface-main-right-scrollcontainer-tile-right-left {
+    position: relative;
+    width: 15vh;
+    height: 5.1vh;
+}
+
+.interface-main-right-scrollcontainer-tile-right-left h1 {
+    color: #FFF;
+    font-family: "Gilroy";
+    font-size: 1.3889vh;
+    font-weight: 500;
+    margin-top: 0%;
+}
+
+.interface-main-right-scrollcontainer-tile-right-left p {
+    color: #FFF;
+    font-family: "Gilroy";
+    font-size: 1.1111vh;
+    font-weight: 400;
+    margin-top: -6%;
+}
+
+.interface-main-right-scrollcontainer-tile-right-left-bottom {
+    position: relative;
+    width: 10.1852vh;
+    height: 1.6667vh;
+    margin-top: -7%;
+    
+    display: flex;
+}
+
+.interface-main-right-scrollcontainer-tile-right-left-bottom-left {
+    position: relative;
+    width: auto;
+    height: 1.6667vh;
+
+    background: #b048ff28;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.interface-main-right-scrollcontainer-tile-right-left-bottom-left h2 {
+    color: #FB48FF;
+    text-align: right;
+    text-shadow: 0vh 0vh 1.2037vh #b048ff71;
+    font-family: "Gilroy";
+    font-size: 1.1111vh;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.interface-main-right-scrollcontainer-tile-right-left-bottom-right {
+    position: relative;
+    width: auto;
+    height: 1.6667vh;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.interface-main-right-scrollcontainer-tile-right-left-bottom-right h2 {
+    color: rgba(255, 255, 255, 0.55);
+    text-align: right;
+    font-family: "Gilroy";
+    font-size: 1.1111vh;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.interface-main-right-scrollcontainer-tile-right-right {
+    position: relative;
+    width: 2.8704vh;
+    height: 5.1vh;
+
+    background: radial-gradient(#47ffa652, #1c5e4ebd);
+    border: solid 1px rgba(255, 255, 255, 0.521);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interface-main-right-scrollcontainer-tile-right-right:hover{
+    background: radial-gradient(#47ffa6b9, #1c5e4ebd);
+}
+
+.interface-main-right-scrollcontainer-tile-right-right img {
+    width: 0.8vh;
+}
+
+.interface-center {
+    position: absolute;
+    width: 69.1667vh;
+    height: 16.6667vh;
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 5%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.interface-center-main {
+    position: relative;
+    width: 21.2965vh;
+    height: 13.5185vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8333vh;
+}
+
+.interface-center-main-top {
+    position: relative;
+    width: 21.2963vh;
+    height: 6.3889vh;
+
+    background: radial-gradient(673.68% 673.68% at 50.00% 50.00%, rgba(255, 255, 255, 0.04) 27.60%, rgba(255, 255, 255, 0.48) 100%);
+    border: .09vh solid rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.interface-center-main-top-top {
+    position: relative;
+    width: 20.1852vh;
+    height: 2.4074vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.interface-center-main-top-top div {
+    position: relative;
+    width: 2.4074vh;
+    height: 2.4074vh;
+
+    background: radial-gradient(#47c08675, #58eea567);
+    border: 0.09vh solid #00ff84bb;
+    box-shadow: 0px 2px 26px #00ff73b0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out; 
+}
+
+.interface-center-main-top-top div:hover{
+    background-image: linear-gradient(315deg, #27945e 0%, #00ffaa88 74%);
+    box-shadow: 0vh 0vh 33px 10px #49cea2cb;
+}
+
+.interface-center-main-top-top img {
+    width: 0.8vh;
+}
+
+.interface-center-main-top-top h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Gilroy";
+    font-size: 1.2963vh;
+    font-weight: 300;
+}
+
+.interface-center-main-top-bottom {
+    position: relative;
+    width: 20.1852vh;
+    height: 2.3148vh;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.463vh;
+}
+
+.interface-center-main-top-bottom div {
+    width: 1.3353vh;
+    height: 1.3353vh;
+}
+
+.selected {
+    border: .09vh solid #FFF;
+
+    box-sizing: border-box;
+}
+
+.interface-center-main-center {
+    position: relative;
+    width: 21.2963vh;
+    height: 2.037vh;
+
+    background: radial-gradient(673.68% 673.68% at 50.00% 50.00%, rgba(255, 255, 255, 0.04) 27.60%, rgba(255, 255, 255, 0.48) 100%);
+    border: .09vh solid rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 6vh;
+}
+
+.interface-center-main-center h1 {
+    color: #FFF;
+    font-family: "Gilroy";
+    font-size: 1.1111vh;
+    font-weight: 510;
+    text-transform: uppercase;
+    margin-left: 10px; /* Increased from 4px */
+    margin-top: 2.2px;
+}
+
+.interface-center-main-center h2 {
+    color: #00ff84bb;
+    text-align: right;
+    text-shadow: 0vh 0vh 1.2037vh rgba(109, 255, 72, 0.55);
+    font-family: "Gilroy";
+    font-size: 1.2037vh;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.2px;
+    margin-left: 10px; /* Added this property */
+}
+
+
+
+.interface-center-main-bottom {
+    position: relative;
+    width: 21.2963vh;
+    height: 3.4259vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.interface-center-main-bottom-button1 {
+    position: relative;
+    width: 10.0926vh;
+    height: 3.4259vh;
+
+    background-image: linear-gradient(315deg, #27945e 0%, #00ffaa 74%);
+    border: 0.09vh solid #00ff84;
+    box-shadow: 0vh 0vh 15px 3px #58ee8257;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.interface-center-main-bottom-button1:hover{
+    background-image: linear-gradient(315deg, #27945e 0%, #00ffaa88 74%);
+    box-shadow: 0vh 0vh 33px 3px #49cea2cb;
+}
+
+.interface-center-main-bottom-button2 {
+    position: relative;
+    width: 10.0926vh;
+    height: 3.4259vh;
+
+    background: radial-gradient(305.00% 138.31% at 50.00% 50.00%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%);
+    box-shadow: 0vh 0vh 6.0185vh 0vh rgba(255, 255, 255, 0.25);
+    border: 0.09vh solid #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.interface-center-main-bottom-button2:hover{
+    background: radial-gradient(305.00% 138.31% at 50.00% 50.00%, rgba(255, 255, 255, 0.623) 0%, rgba(255, 255, 255, 0.00) 100%);
+    box-shadow: 0vh 0vh 33px 3px #ffffff9c;
+}
+
+.interface-center-main-bottom-button1 h1,
+.interface-center-main-bottom-button2 h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Gilroy";
+    font-size: 1.1111vh;
+    font-weight: 600;
+    text-transform: uppercase;
+}

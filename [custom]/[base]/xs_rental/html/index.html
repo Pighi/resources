@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Your Title</title>
+  <meta name="description" content="Your Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+<body style="display: none;">
+  <div class="interface" id="app" style="display: none;">
+    <div class="interface-main">
+      <div class="interface-main-left">
+        <img src="./assets/img/lines.svg" draggable="false">
+      </div>
+      <div class="interface-main-right">
+        <div class="interface-main-right-head">
+          <div class="interface-main-right-head-top">
+            <h1>YouRent</h1>
+            <img src="./assets/img/lines2.svg" draggable="false">
+          </div>
+          <p>VEHICLE RENTAL CENTER</p>
+        </div>
+        <div class="interface-main-right-search">
+          <input ref="searchInput" @keyup.enter="searchCars" v-model="searchQuery" placeholder="Search car by name">
+          <div @click="searchCars">
+            <img src="./assets/img/search.svg" draggable="false">
+          </div>
+        </div>
+        <div class="interface-main-right-scrollcontainer">
+          <div v-for="(item, index) in filteredData" :key="index" class="interface-main-right-scrollcontainer-tile">
+            <div class="interface-main-right-scrollcontainer-tile-left">
+              <img src="./assets/img/car.svg" draggable="false">
+            </div>
+            <div class="interface-main-right-scrollcontainer-tile-right">
+              <div class="interface-main-right-scrollcontainer-tile-right-left">
+                <h1>{{ item.name }}</h1>
+                <p>{{ item.model }}</p>
+                <div class="interface-main-right-scrollcontainer-tile-right-left-bottom">
+                  <div class="interface-main-right-scrollcontainer-tile-right-left-bottom-left">
+                    <h2>${{ item.price }}</h2>
+                  </div>
+                  <div class="interface-main-right-scrollcontainer-tile-right-left-bottom-right">
+                    <h2>AN HOUR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="interface-main-right-scrollcontainer-tile-right-right" @click="parkedOut(item)">
+                <img src="./assets/img/arrow.svg" draggable="false">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rotate-container">
+      <span class="rotate-text">🖱️ ➞ ROTATE</span>
+    </div>
+    <div class="interface-center">
+      <div class="interface-center-main">
+        <div class="interface-center-main-top">
+          <div class="interface-center-main-top-top">
+            <div @click="changeMinutes(-15)">
+              <img style="transform: matrix(-1, 0, 0, 1, 0, 0);" src="./assets/img/arrow.svg" draggable="false">
+            </div>
+            <h1>{{ selectedMinutes }} Minutes</h1>
+            <div @click="changeMinutes(15)">
+              <img src="./assets/img/arrow.svg" draggable="false">
+            </div>
+          </div>
+          <div class="interface-center-main-top-bottom">
+            <div v-for="(color, index) in colors" :key="index" :style="{ background: color }"
+              @click="selectColor(color)">
+            </div>
+          </div>
+        </div>
+        <div class="interface-center-main-center">
+          <h1>Total Price</h1>
+          <h2>{{ totalPrice }}</h2>
+        </div>
+        <div class="interface-center-main-bottom">
+          <div class="interface-center-main-bottom-button1" @click="payWithCard(filteredData[0])">
+            <h1>Pay by card</h1>
+          </div>
+          <div class="interface-center-main-bottom-button2" @click="payWithCash(filteredData[0])">
+            <h1>Pay by cash</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
